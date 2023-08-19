@@ -14,10 +14,10 @@ import java.util.List;
 
 public class Engins {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long idengin;
-    private boolean panne;
-    private boolean disponibilite;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idengin;
+    private Boolean panne;
+    private   Boolean disponibilite;
     @ManyToOne
     @JoinColumn(name = "idfamille")
     private Famille famille;

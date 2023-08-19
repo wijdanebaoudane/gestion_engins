@@ -14,7 +14,7 @@ import java.util.List;
 
 public class Utilisateur {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_user;
     private String login;
     private String mdp;

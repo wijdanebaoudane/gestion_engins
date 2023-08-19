@@ -15,7 +15,7 @@ import java.util.List;
 
 public class Demande {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long iddemande;
     private Date dateSortie;
     private Boolean confirmation;

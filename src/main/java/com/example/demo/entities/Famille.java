@@ -16,7 +16,7 @@ import java.util.List;
 
 public class Famille {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idtype;
     private String nomfammile;
     private String image;

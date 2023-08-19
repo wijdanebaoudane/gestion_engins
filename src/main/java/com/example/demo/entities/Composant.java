@@ -13,7 +13,7 @@ import java.util.List;
 @Data
 public class Composant {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idcomposant;
     private String nom;
     private String image;
