@@ -1,10 +1,11 @@
 package com.example.demo.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.io.Serializable;
 @Entity
-
+@Data
 public class Detaildemmande implements Serializable {
     @EmbeddedId
     private  Detailcommandekey id;

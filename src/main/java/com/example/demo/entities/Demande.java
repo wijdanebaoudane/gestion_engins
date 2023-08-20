@@ -28,5 +28,9 @@ public class Demande {
     private List<Detaildemmande> detaildemmandes;
     @OneToMany(mappedBy = "demande",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     private List<Affectation> deatailengins;
+    @OneToMany(mappedBy = "demande",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    private List<Composantsortie> composantSorties;
+    @OneToMany(mappedBy = "demande",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    private List<ComposantEntree> composantEntrees;
 
 }

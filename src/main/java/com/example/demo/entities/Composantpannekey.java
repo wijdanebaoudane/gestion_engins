@@ -2,8 +2,10 @@ package com.example.demo.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
+import lombok.Data;
 
 import java.io.Serializable;
+@Data
 @Embeddable
 public class Composantpannekey implements Serializable {
     @Column(name="composant_id")
