@@ -29,13 +29,7 @@ public class UserService {
     }
 
     public void UpdateUserToken(Long id_user, String token){
-        Utilisateur user=userRepository.findByID(id_user).orElseThrow(()->new RuntimeException("User not found  "));
-        user.setToken(token);
-        userRepository.save(user);
-    }
-
-    public void UpdateUserToken(Long id_user, String token){
-        Utilisateur user=userRepository.findByID(id_user).orElseThrow(()->new RuntimeException("User not found  "));
+        Utilisateur user=userRepository.findById(id_user).orElseThrow(()->new RuntimeException("User not found  "));
         user.setToken(token);
         userRepository.save(user);
     }
