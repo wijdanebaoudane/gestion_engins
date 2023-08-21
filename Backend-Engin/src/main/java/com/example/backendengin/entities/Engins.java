@@ -25,6 +25,11 @@ public class Engins {
     private List<Affectation> deatailengins;
     @OneToMany(mappedBy = "engins",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     private List<Composantpanne> composantpannes;
+    @OneToMany(mappedBy = "engin",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    private List<Composantsortie> composantSorties;
+    @OneToMany(mappedBy = "engin",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    private List<ComposantEntree> composantEntrees;
+
 
 
 }

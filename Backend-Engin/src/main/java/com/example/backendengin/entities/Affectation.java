@@ -1,10 +1,12 @@
 package com.example.backendengin.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
 
+@Data
 @Entity
 public class Affectation implements Serializable {
     @EmbeddedId

@@ -1,8 +1,10 @@
 package com.example.backendengin.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.io.Serializable;
+@Data
 
 @Entity
 public class Composantpanne implements Serializable {

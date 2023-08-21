@@ -6,9 +6,9 @@ import lombok.Data;
 
 public class FamilleDto {
     private String nomfamille;
-    private int quantite;
+    private  Long quantite;
 
-    public FamilleDto(String nomfamille, int quantite) {
+    public FamilleDto(String nomfamille, Long quantite) {
         this.nomfamille = nomfamille;
         this.quantite = quantite;
     }

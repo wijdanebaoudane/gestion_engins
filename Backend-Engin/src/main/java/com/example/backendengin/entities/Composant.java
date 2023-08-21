@@ -19,4 +19,8 @@ public class Composant {
     private String image;
     @OneToMany(mappedBy = "composant",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     private List<Composantpanne> composantpannes;
+    @OneToMany(mappedBy = "composant",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    private List<Composantsortie> composantSorties;
+    @OneToMany(mappedBy = "composant",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    private List<ComposantEntree> composantEntrees;
 }
