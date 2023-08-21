@@ -1,7 +1,7 @@
 package com.example.backendengin.repositories;
 
-import com.example.demo.entities.Composant;
-import com.example.demo.entities.Engins;
+import com.example.backendengin.entities.Composant;
+import com.example.backendengin.entities.Engins;
 import lombok.Data;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

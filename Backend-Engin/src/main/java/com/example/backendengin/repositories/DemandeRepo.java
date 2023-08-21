@@ -1,8 +1,8 @@
 package com.example.backendengin.repositories;
 
-import com.example.demo.dtos.EnginsAffectationDTO;
-import com.example.demo.entities.Demande;
-import com.example.demo.entities.Utilisateur;
+import com.example.backendengin.dtos.EnginsAffectationDTO;
+import com.example.backendengin.entities.Demande;
+import com.example.backendengin.entities.Utilisateur;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

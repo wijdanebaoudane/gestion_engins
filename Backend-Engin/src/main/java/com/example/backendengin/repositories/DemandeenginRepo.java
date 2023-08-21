@@ -1,7 +1,7 @@
 package com.example.backendengin.repositories;
 
-import com.example.demo.entities.Affectation;
-import com.example.demo.entities.Affectation_key;
+import com.example.backendengin.entities.Affectation;
+import com.example.backendengin.entities.Affectation_key;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

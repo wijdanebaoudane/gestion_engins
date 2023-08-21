@@ -1,6 +1,6 @@
 package com.example.backendengin.repositories;
 
-import com.example.demo.entities.Famille;
+import com.example.backendengin.entities.Famille;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

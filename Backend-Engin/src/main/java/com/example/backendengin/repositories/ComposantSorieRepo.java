@@ -1,7 +1,7 @@
 package com.example.backendengin.repositories;
 
-import com.example.demo.entities.Composantsortie;
-import com.example.demo.entities.Composantsortiekey;
+import com.example.backendengin.entities.Composantsortie;
+import com.example.backendengin.entities.Composantsortiekey;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

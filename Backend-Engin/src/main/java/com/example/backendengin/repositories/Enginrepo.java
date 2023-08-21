@@ -1,9 +1,9 @@
 package com.example.backendengin.repositories;
 
-import com.example.demo.dtos.EnginDetailsDTO;
-import com.example.demo.dtos.EnginsortieDTO;
-import com.example.demo.dtos.FamilleDto;
-import com.example.demo.entities.Engins;
+import com.example.backendengin.dtos.EnginDetailsDTO;
+import com.example.backendengin.dtos.EnginsortieDTO;
+import com.example.backendengin.dtos.FamilleDto;
+import com.example.backendengin.entities.Engins;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

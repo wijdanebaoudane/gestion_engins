@@ -1,9 +1,9 @@
 package com.example.backendengin.repositories;
 
-import com.example.demo.entities.Composant;
-import com.example.demo.entities.Composantpanne;
-import com.example.demo.entities.Composantpannekey;
-import com.example.demo.entities.Engins;
+import com.example.backendengin.entities.Composant;
+import com.example.backendengin.entities.Composantpanne;
+import com.example.backendengin.entities.Composantpannekey;
+import com.example.backendengin.entities.Engins;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

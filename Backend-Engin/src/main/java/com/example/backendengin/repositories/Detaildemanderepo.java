@@ -1,7 +1,7 @@
 package com.example.backendengin.repositories;
 
-import com.example.demo.entities.Detailcommandekey;
-import com.example.demo.entities.Detaildemmande;
+import com.example.backendengin.entities.Detailcommandekey;
+import com.example.backendengin.entities.Detaildemmande;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
