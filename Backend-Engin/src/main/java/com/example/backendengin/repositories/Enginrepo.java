@@ -13,12 +13,12 @@ import java.util.List;
 @Repository
 
 public interface Enginrepo extends JpaRepository<Engins,Long> {
-    @Query("SELECT new com.example.demo.dtos.EnginDetailsDTO(e.idengin, e.disponibilite, e.famille.idtype,f.image,f.nomfammile) FROM Engins e JOIN e.famille f JOIN f.detaildemmandes de WHERE de.id.demandeid = ?1")
+    @Query("SELECT new com.example.backendengin.dtos.EnginDetailsDTO(e.idengin, e.disponibilite, e.famille.idtype,f.image,f.nomfammile) FROM Engins e JOIN e.famille f JOIN f.detaildemmandes de WHERE de.id.demandeid = ?1")
     List<EnginDetailsDTO> getEnginDetailsByDemandeId(Long demandeId);
-    @Query("SELECT new com.example.demo.dtos.FamilleDto(e.nomfammile,de.quantite) FROM Famille e JOIN e.detaildemmandes de  WHERE de.id.demandeid = ?1")
+    @Query("SELECT new com.example.backendengin.dtos.FamilleDto(e.nomfammile,de.quantite) FROM Famille e JOIN e.detaildemmandes de  WHERE de.id.demandeid = ?1")
     List<FamilleDto> getdetail(Long demandeId);
 
-    @Query(value = "SELECT  new com.example.demo.dtos.EnginsortieDTO(e.idengin,f.nomfammile,f.image,d.iddemande)" +
+    @Query(value = "SELECT  new com.example.backendengin.dtos.EnginsortieDTO(e.idengin,f.nomfammile,f.image,d.iddemande)" +
             "FROM Engins e, Famille f,Affectation de,Demande d\n" +
             "WHERE e.famille.idtype = f.idtype AND e.disponibilite=true and e.panne=false  and \n" +
             "de.id.enginsid=e.idengin and d.iddemande=de.id.demandeid "+
@@ -26,7 +26,7 @@ public interface Enginrepo extends JpaRepository<Engins,Long> {
             "and not exists  (select co from ComposantEntree co where co.id.idengin=e.idengin and co.id.iddemande=d.iddemande)"
     )
     List<EnginsortieDTO>Enginsortir1();
-    @Query(value = "SELECT  new com.example.demo.dtos.EnginsortieDTO(e.idengin,f.nomfammile,f.image,d.iddemande)" +
+    @Query(value = "SELECT  new com.example.backendengin.dtos.EnginsortieDTO(e.idengin,f.nomfammile,f.image,d.iddemande)" +
             "FROM Engins e, Famille f,Affectation de,Demande d\n" +
             "WHERE e.famille.idtype = f.idtype AND e.disponibilite=false and e.panne=false  and \n" +
             "de.id.enginsid=e.idengin and d.iddemande=de.id.demandeid "+

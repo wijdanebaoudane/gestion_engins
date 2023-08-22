@@ -17,7 +17,7 @@ public interface DemandeRepo extends JpaRepository<Demande,Long> {
 
     List<Demande> findByIddemande(Long id);
     List<Demande> findByConfirmationIsFalse();
-    @Query("select new com.example.demo.dtos.EnginsAffectationDTO(e.idengin,f.nomfammile,f.image) from Engins e, Famille f, Detaildemmande d where e.famille.idtype = f.idtype and f.idtype = d.famille.idtype and d.demande.iddemande = :iddemande and e.disponibilite = true and e.panne = false and e.idengin not in (select aff.engins.idengin from Affectation aff, Demande de where de.iddemande = aff.demande.iddemande and To_char(de.dateSortie,'yyyy-MM-dd')=:dateSortie)")
+    @Query("select new com.example.backendengin.dtos.EnginsAffectationDTO(e.idengin,f.nomfammile,f.image) from Engins e, Famille f, Detaildemmande d where e.famille.idtype = f.idtype and f.idtype = d.famille.idtype and d.demande.iddemande = :iddemande and e.disponibilite = true and e.panne = false and e.idengin not in (select aff.engins.idengin from Affectation aff, Demande de where de.iddemande = aff.demande.iddemande and To_char(de.dateSortie,'yyyy-MM-dd')=:dateSortie)")
     List<EnginsAffectationDTO> findEnginDispoByDemandeAndDate(@Param("dateSortie") String dateSortie, @Param("iddemande") Long iddemande);
     @Query("SELECT de FROM Demande de, Affectation ef \n" +
             "WHERE de.iddemande = ef.id.demandeid \n" +
