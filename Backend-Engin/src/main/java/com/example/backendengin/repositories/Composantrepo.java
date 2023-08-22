@@ -13,7 +13,7 @@ public interface Composantrepo extends JpaRepository<Composant,Long> {
 
     List<Composant> findByComposantSortiesDemandeIddemandeAndComposantSortiesEnginIdengin(Long iddemande, Long idengin);
     List<Composant> findByComposantEntreesDemandeIddemandeAndComposantEntreesEnginIdengin(Long iddemande, Long idengin);
-    List<Composant> findByComposantpannesEngins(Engins engins);
+    List<Composant> findByComposantpannesEngins(Long idengin);
 
 
 
