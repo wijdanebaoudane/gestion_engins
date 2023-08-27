@@ -14,7 +14,7 @@ import java.util.List;
 public class Composant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idcomposant;
+    private Long idcomposant;
     private String nom;
     private String image;
     @OneToMany(mappedBy = "composant",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
