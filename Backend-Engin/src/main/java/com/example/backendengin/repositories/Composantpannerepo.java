@@ -17,7 +17,7 @@ import java.util.Optional;
 
 public interface Composantpannerepo extends JpaRepository<Composantpanne, Composantpannekey> {
 
-    Optional<Composantpanne> findByEnginsAndComposant(Engins engins, Composant composant);
+    Optional<Composantpanne> findByEnginsAndComposant(Engins engin, Composant composant);
 
     @Modifying
     @Transactional

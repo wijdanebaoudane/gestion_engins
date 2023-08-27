@@ -40,7 +40,7 @@ public class PanneService {
     public void UpdatePanneEngin(Long id_engin,Long id_composant,boolean repared) {
         Engins engin=enginrepository.findById(id_engin).orElseThrow(()->new RuntimeException("No such eng"));
         Composant composant=composantrepository.findById(id_composant).orElseThrow(()->new RuntimeException("No such composant"));
-        Composantpanne cp= pannerepository.findByEnginsAndComposant(engin,composant).orElseThrow(()->new RuntimeException("Panne composant not found"));
+        Composantpanne cp= pannerepository.findByEnginsAndComposant(engin,composant).orElseThrow(()->new RuntimeException("No such Pane"));
         cp.setRepare(repared);
         pannerepository.save(cp);
     }
