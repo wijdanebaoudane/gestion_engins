@@ -7,12 +7,14 @@ import com.example.backendengin.entities.Engins;
 import com.example.backendengin.service.EnginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/engins")
+@PreAuthorize("hasAnyAuthority('ADMIN','ASSISTANT')")
 public class EnginController {
 
     private final EnginService enginService;

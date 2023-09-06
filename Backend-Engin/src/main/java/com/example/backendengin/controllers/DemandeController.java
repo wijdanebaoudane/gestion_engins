@@ -5,12 +5,14 @@ import com.example.backendengin.entities.Demande;
 import com.example.backendengin.service.DemandeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/demandes")
+@PreAuthorize("hasAnyAuthority('DEMANDEUR','ASSISTANT')")
 public class DemandeController {
 
     private final DemandeService demandeService;
