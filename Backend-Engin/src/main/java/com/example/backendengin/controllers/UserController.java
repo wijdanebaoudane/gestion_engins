@@ -5,12 +5,14 @@ import com.example.backendengin.service.UserService;
 import com.example.backendengin.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/users")
+@PreAuthorize("hasAuthority('ADMIN')")
 public class UserController {
 
     private final UserService userServiceImpl;

@@ -4,12 +4,14 @@ import com.example.backendengin.entities.Composantsortie;
 import com.example.backendengin.service.ComposantSortieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/composant-sorties")
+@PreAuthorize("hasAuthority('ASSISTANT')")
 public class ComposantSortieController {
 
     private final ComposantSortieService composantSortieService;

@@ -3,12 +3,14 @@ package com.example.backendengin.controllers;
 import com.example.backendengin.entities.Composant;
 import com.example.backendengin.service.ComposantService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/composants")
+@PreAuthorize("hasAuthority('ASSISTANT')")
 public class ComposantController {
 
     private final ComposantService composantService;

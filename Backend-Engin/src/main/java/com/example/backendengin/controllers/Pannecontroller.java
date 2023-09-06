@@ -4,12 +4,14 @@ import com.example.backendengin.entities.Composantpanne;
 import com.example.backendengin.service.PanneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/pannes")
+@PreAuthorize("hasAnyAuthority('TECHNICIEN','ASSISTANT')")
 public class Pannecontroller {
 
     private final PanneService panneService;
